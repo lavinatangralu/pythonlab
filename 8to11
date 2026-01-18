@@ -1,0 +1,70 @@
+8. Program to Find the Minimum Number of Desks Needed
+
+# Each desk can seat 2 students
+
+a = int(input("Enter number of students in class A: "))
+b = int(input("Enter number of students in class B: "))
+c = int(input("Enter number of students in class C: "))
+
+# Calculate desks needed per class
+desks_a = (a + 1) // 2
+desks_b = (b + 1) // 2
+desks_c = (c + 1) // 2
+
+total_desks = desks_a + desks_b + desks_c
+
+print(f"Minimum number of desks needed: {total_desks}")
+
+9. Program to Find the Angle of the Hour Hand
+
+# H hours, M minutes, S seconds since midnight
+H = int(input("Enter hours (0–11): "))
+M = int(input("Enter minutes (0–59): "))
+S = int(input("Enter seconds (0–59): "))
+
+# Each hour = 30 degrees, each minute = 0.5 degrees, each second = 0.5/60 degrees
+angle = (H * 30) + (M * 0.5) + (S * (0.5 / 60))
+
+print(f"The hour hand angle is {angle:.2f} degrees")
+
+10. Program to Find the Fourth Vertex of a Rectangle
+
+# Input three vertices of a rectangle (sides parallel to axes)
+print("Enter three coordinates (x, y):")
+x1, y1 = map(int, input("Enter x1 y1: ").split())
+x2, y2 = map(int, input("Enter x2 y2: ").split())
+x3, y3 = map(int, input("Enter x3 y3: ").split())
+
+# The fourth vertex will have the x-coordinate and y-coordinate
+# that appear only once among the three given points
+if x1 == x2:
+    x4 = x3
+elif x1 == x3:
+    x4 = x2
+else:
+    x4 = x1
+
+if y1 == y2:
+    y4 = y3
+elif y1 == y3:
+    y4 = y2
+else:
+    y4 = y1
+
+print(f"The fourth vertex is: ({x4}, {y4})")
+
+11. Program to Find the Missing Card Number
+
+# Input N and N−1 remaining card numbers
+N = int(input("Enter total number of cards (N): "))
+
+print(f"Enter {N-1} card numbers (separated by spaces):")
+cards = list(map(int, input().split()))
+
+# Formula-based approach
+total_sum = N * (N + 1) // 2
+missing = total_sum - sum(cards)
+
+print(f"The missing card number is: {missing}")
+
+
