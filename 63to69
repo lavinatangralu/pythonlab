@@ -1,0 +1,157 @@
+63. Program to Keep Record of Students Data (Store, Update, Delete)
+Code:
+# Program to keep record of students data (store, update, delete)
+
+def add_student():
+    with open("students.txt", "a") as f:
+        roll = input("Enter Roll No: ")
+        name = input("Enter Name: ")
+        marks = input("Enter Marks: ")
+        f.write(roll + "," + name + "," + marks + "\n")
+    print("Student added successfully")
+
+def view_students():
+    with open("students.txt", "r") as f:
+        print("Student Records:")
+        print(f.read())
+
+def delete_student():
+    roll_no = input("Enter Roll No to delete: ")
+    with open("students.txt", "r") as f:
+        lines = f.readlines()
+
+    with open("students.txt", "w") as f:
+        for line in lines:
+            if not line.startswith(roll_no + ","):
+                f.write(line)
+    print("Student deleted successfully")
+
+while True:
+    print("\n1. Add Student\n2. View Students\n3. Delete Student\n4. Exit")
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        add_student()
+    elif choice == 2:
+        view_students()
+    elif choice == 3:
+        delete_student()
+    elif choice == 4:
+        break
+    else:
+        print("Invalid choice")
+
+Output:
+1. Add Student
+2. View Students
+3. Delete Student
+4. Exit
+Enter choice: 1
+Enter Roll No: 29
+Enter Name: chris tangralu
+Enter Marks: 35
+Student added successfully
+
+1. Add Student
+2. View Students
+3. Delete Student
+4. Exit
+Enter choice: 2
+Student Records:
+29,chris tangralu,35
+
+64. Read Content of a Text File and Print It
+Code:
+# Read content of a text file and print it
+
+try:
+    with open("sample.txt", "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("Error: File does not exist")
+
+Output:
+Error: File does not exist
+
+65. Take User Input and Write It to a New Text File
+Code:
+# Take user input and write it to a new text file
+
+text = input("Enter a string: ")
+
+with open("output.txt", "w") as file:
+    file.write(text)
+
+print("Data written to file successfully")
+
+Output:
+Enter a string: Python file handling program
+Data written to file successfully
+
+66. Count Number of Words and Write Count to a New File
+Code:
+# Count number of words and write count to a new file
+
+try:
+    with open("sample.txt", "r") as file:
+        content = file.read()
+        words = content.split()
+        word_count = len(words)
+
+    with open("wordcount.txt", "w") as file:
+        file.write("Number of words: " + str(word_count))
+
+    print("Word count written to file")
+except FileNotFoundError:
+    print("Error: sample.txt file not found")
+
+Output:
+Error: sample.txt file not found
+
+67. Copy Content from One File to Another
+Code:
+# Copy content from one file to another
+
+try:
+    with open("source.txt", "r") as src:
+        content = src.read()
+
+    with open("destination.txt", "w") as dest:
+        dest.write(content)
+
+    print("File copied successfully")
+except FileNotFoundError:
+    print("Error: source.txt file not found")
+
+Output:
+Error: source.txt file not found
+
+68. Count Number of Lines in a Text File
+Code:
+# Count number of lines in a text file
+
+try:
+    with open("sample.txt", "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("Error: sample.txt not found in program folder")
+
+Output:
+Error: sample.txt not found in program folder
+
+69. Append User Input to an Existing Text File
+Code:
+# Append user input to an existing text file
+
+text = input("Enter text to append: ")
+
+with open("sample.txt", "a") as file:
+    file.write("\n" + text)
+
+print("Text appended successfully")
+
+Output:
+Enter text to append: This line is added at the end
+Text appended successfully
