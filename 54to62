@@ -1,0 +1,167 @@
+54. Function to Check if a Number is Even or Odd
+Code:
+# Function to check if a number is even or odd
+
+def check_even_odd(num):
+    if num % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+
+n = int(input("Enter a number: "))
+check_even_odd(n)
+
+Output:
+Enter a number: 8
+Even
+
+55. Function to Find the Maximum of Two Numbers
+Code:
+# Function to find the maximum of two numbers
+
+def find_max(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+
+print("Maximum number is:", find_max(x, y))
+
+Output:
+Enter first number: 6
+Enter second number: 2
+Maximum number is: 6
+
+56. Function with Keyword Arguments (User Input)
+Code:
+# Function with keyword arguments (user input)
+
+def student_info(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+
+student_info(age=age, name=name)
+
+Output:
+Enter name: vivek ponnaghanti
+Enter age: 18
+Name: vivek ponnaghanti
+Age: 18
+
+57. Function with Default Arguments (User Input)
+Code:
+# Function with default arguments (user input)
+
+def greet(name="User"):
+    print("Hello", name)
+
+name = input("Enter your name (press enter to skip): ")
+
+if name == "":
+    greet()
+else:
+    greet(name)
+
+Output:
+Enter your name (press enter to skip): vivek ponnaghanti
+Hello vivek ponnaghanti
+
+58. Function to Find the Factorial Using Recursion
+Code:
+# Function to find the factorial using recursion
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter a number: "))
+print("Factorial is:", factorial(num))
+
+Output:
+Enter a number: 5
+Factorial is: 120
+
+59. Function to Find the Sum of Digits Recursively
+Code:
+# Function to find the sum of digits recursively
+
+def sum_of_digits(n):
+    if n == 0:
+        return 0
+    else:
+        return (n % 10) + sum_of_digits(n // 10)
+
+num = int(input("Enter a number: "))
+print("Sum of digits:", sum_of_digits(num))
+
+Output:
+Enter a number: 4
+Sum of digits: 4
+
+60. Function to Count Vowels in a String
+Code:
+# Function to count vowels in a string
+
+def count_vowels(s):
+    count = 0
+    for ch in s.lower():
+        if ch in 'aeiou':
+            count += 1
+    return count
+
+text = input("Enter a string: ")
+print("Number of vowels:", count_vowels(text))
+
+Output:
+Enter a string: vha
+Number of vowels: 1
+
+61. Function to Greet a User
+Code:
+# Function to greet a user
+
+def greet_user(name):
+    print("Hello", name + "! Welcome to Python.")
+
+name = input("Enter your name: ")
+greet_user(name)
+
+Output:
+Enter your name: chris
+Hello chris! Welcome to Python.
+
+**62. Print Sequence in Reverse Using Recursion (Ends with 0)
+
+(No Lists or Data Structures Used)**
+
+Code:
+# Print sequence in reverse using recursion (ends with 0)
+# No lists or data structures used
+
+def reverse_sequence():
+    num = int(input("Enter number: "))
+    if num == 0:
+        return
+    reverse_sequence()
+    print(num)
+
+print("Enter numbers (end with 0):")
+reverse_sequence()
+
+Output:
+Enter numbers (end with 0):
+Enter number: 5
+Enter number: 10
+Enter number: 15
+Enter number: 0
+15
+10
+5
