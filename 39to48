@@ -1,0 +1,263 @@
+39. Program to Create and View a Dictionary
+Code:
+# Program to create and view a dictionary
+
+n = int(input("Enter number of elements: "))
+my_dict = {}
+
+for i in range(n):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    my_dict[key] = value
+
+print("Dictionary:", my_dict)
+
+Output:
+Enter number of elements: 4
+Enter key: g
+Enter value: g
+Enter key: h
+Enter value: h
+Enter key: e
+Enter value: e
+Enter key: u
+Enter value: u
+Dictionary: {'g': 'g', 'h': 'h', 'e': 'e', 'u': 'u'}
+
+40. Program to Print Values of a Dictionary
+Code:
+# Program to print values of a dictionary
+
+my_dict = {}
+
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    my_dict[key] = value
+
+print("Values of dictionary:")
+for value in my_dict.values():
+    print(value)
+
+Output:
+Enter number of elements: 3
+Enter key: h
+Enter value: 2
+Enter key: b
+Enter value: 6
+Enter key: k
+Enter value: 2
+Values of dictionary:
+2
+6
+2
+
+42. Program to Print All Keys of a Dictionary
+Code:
+# Program to print all keys of a dictionary
+
+my_dict = {}
+
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    my_dict[key] = value
+
+print("Keys of dictionary:")
+for key in my_dict.keys():
+    print(key)
+
+Output:
+Enter number of elements: 3
+Enter key: 2
+Enter value: a
+Enter key: a
+Enter value: a
+Enter key: 2
+Enter value: a
+Keys of dictionary:
+2
+a
+
+43. Program to Insert and Delete from a Dictionary
+Code:
+# Program to insert and delete from a dictionary
+
+my_dict = {}
+
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    my_dict[key] = value
+
+print("Dictionary after insertion:", my_dict)
+
+del_key = input("Enter key to delete: ")
+if del_key in my_dict:
+    del my_dict[del_key]
+    print("Dictionary after deletion:", my_dict)
+else:
+    print("Key not found")
+
+Output:
+Enter number of elements: 3
+Enter key: i
+Enter value: f
+Enter key: f
+Enter value: f
+Enter key: l
+Enter value: f
+Dictionary after insertion: {'i': 'f', 'f': 'f', 'l': 'f'}
+Enter key to delete: l
+Dictionary after deletion: {'i': 'f', 'f': 'f'}
+
+44. Program to Sort Dictionary by Value (Ascending & Descending)
+Code:
+# Program to sort dictionary by value (ascending & descending)
+
+my_dict = {}
+
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    key = input("Enter key: ")
+    value = int(input("Enter value: "))
+    my_dict[key] = value
+
+print("Ascending order:", dict(sorted(my_dict.items(), key=lambda x: x[1])))
+print("Descending order:", dict(sorted(my_dict.items(), key=lambda x: x[1], reverse=True)))
+
+Output:
+Enter number of elements: 3
+Enter key: u
+Enter value: 1
+Enter key: v
+Enter value: 2
+Enter key: t
+Enter value: 6
+Ascending order: {'u': 1, 'v': 2, 't': 6}
+Descending order: {'t': 6, 'v': 2, 'u': 1}
+
+45. Program to Concatenate Dictionaries to Create a New One
+Code:
+# Program to concatenate dictionaries to create a new one
+
+dict1 = {}
+dict2 = {}
+
+n1 = int(input("Enter elements for first dictionary: "))
+for i in range(n1):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    dict1[key] = value
+
+n2 = int(input("Enter elements for second dictionary: "))
+for i in range(n2):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    dict2[key] = value
+
+dict1.update(dict2)
+print("Concatenated Dictionary:", dict1)
+
+Output:
+Enter elements for first dictionary: 2
+Enter key: b
+Enter value: 1
+Enter key: b
+Enter value: 1
+Enter elements for second dictionary: 2
+Enter key: v
+Enter value: 2
+Enter key: v
+Enter value: 2
+Concatenated Dictionary: {'b': '1', 'v': '2'}
+
+45. Program to Check Whether a Given Key Exists in a Dictionary
+Code:
+# Program to check whether a given key exists in a dictionary
+
+my_dict = {}
+
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    my_dict[key] = value
+
+search_key = input("Enter key to search: ")
+
+if search_key in my_dict:
+    print("Key exists in dictionary")
+else:
+    print("Key does not exist")
+
+Output:
+Enter number of elements: 2
+Enter key: c
+Enter value: 4
+Enter key: 4
+Enter value: 4
+Enter key to search: c
+Key exists in dictionary
+
+47. Program to Merge Two Python Dictionaries
+Code:
+# Program to merge two python dictionaries
+
+dict1 = {}
+dict2 = {}
+
+n1 = int(input("Enter elements for first dictionary: "))
+for i in range(n1):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    dict1[key] = value
+
+n2 = int(input("Enter elements for second dictionary: "))
+for i in range(n2):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    dict2[key] = value
+
+dict1.update(dict2)
+print("Merged Dictionary:", dict1)
+
+Output:
+Enter elements for first dictionary: 2
+Enter key: s
+Enter value: 7
+Enter key: s
+Enter value: 7
+Enter elements for second dictionary: 2
+Enter key: e
+Enter value: 3
+Enter key: e
+Enter value: 3
+Merged Dictionary: {'s': '7', 'e': '3'}
+
+48. Program to Get Maximum and Minimum Value in a Dictionary
+Code:
+# Program to get maximum and minimum value in a dictionary
+
+my_dict = {}
+
+n = int(input("Enter number of elements: "))
+for i in range(n):
+    key = input("Enter key: ")
+    value = int(input("Enter value: "))
+    my_dict[key] = value
+
+print("Maximum value:", max(my_dict.values()))
+print("Minimum value:", min(my_dict.values()))
+
+Output:
+Enter number of elements: 2
+Enter key: w
+Enter value: 5
+Enter key: w
+Enter value: 5
+Maximum value: 5
+Minimum value: 5
