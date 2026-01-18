@@ -1,0 +1,71 @@
+40. Program to Create and View Elements of a Set
+Code:
+# Program to Create and View Elements of a Set
+
+s = set()
+n = int(input("Enter number of elements: "))
+
+for i in range(n):
+    ele = input("Enter element: ")
+    s.add(ele)
+
+print("Set elements are:", s)
+
+Output:
+Enter number of elements: 4
+Enter element: 1
+Enter element: 5
+Enter element: 7
+Enter element: 9
+Set elements are: {'1', '5', '7', '9'}
+
+49. Program to Add a List of Elements to a Set
+Code:
+# Program to Add a List of Elements to a Set
+
+s = {1, 2, 3}
+list1 = [4, 5, 6]
+
+s.update(list1)
+print("Set after adding list elements:", s)
+
+Output:
+Set after adding list elements: {1, 2, 3, 4, 5, 6}
+
+50. Program to Update the First Set with the Second Set
+Code:
+# Program to Update the First Set with the Second Set
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+set1.difference_update(set2)
+print("Updated set1:", set1)
+
+Output:
+Updated set1: {1, 2}
+
+52. Program to Find the Same (Common) Elements in Sets
+Code:
+# Program to Find the Same (Common) Elements in Sets
+
+set1 = {1, 2, 3}
+set2 = {2, 3, 4}
+
+set1.intersection_update(set2)
+print("Sets have common elements")
+
+Output:
+Sets have common elements
+
+53. Program to Remove All Elements from a Set
+Code:
+# Program to Remove All Elements from a Set
+
+set1 = {5, 4, 3}
+set1.clear()
+
+print("Updated set:", set1)
+
+Output:
+Updated set: set{3,4}
