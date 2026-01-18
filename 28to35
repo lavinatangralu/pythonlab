@@ -1,0 +1,139 @@
+28. Program to Create and View Elements of a List
+Code:
+# Program to create and view element of a list
+# Create and display list
+
+n = int(input("Enter how many elements you want in the list: "))
+my_list = []
+
+for i in range(n):
+    value = input("Enter element: ")
+    my_list.append(value)
+
+print("List elements are:", my_list)
+
+Output:
+Enter how many elements you want in the list: 5
+Enter element: 5
+Enter element: 4
+Enter element: 2
+Enter element: 8
+Enter element: 4
+List elements are: ['5', '4', '2', '8', '4']
+
+29. Program to Create and View Elements of a Tuple (User Input)
+Code:
+# Program to Create and View Elements of a Tuple (User Input)
+
+n = int(input("Enter how many elements you want in the tuple: "))
+temp_list = []
+
+for i in range(n):
+    value = input("Enter element: ")
+    temp_list.append(value)
+
+my_tuple = tuple(temp_list)
+print("Tuple elements are:", my_tuple)
+
+Output:
+Enter how many elements you want in the tuple: 4
+Enter element: 5
+Enter element: 2
+Enter element: 2
+Enter element: 8
+Tuple elements are: ('5', '2', '2', '8')
+
+30. Program to Access List Index and Values (User Input)
+Code:
+# Program to Access List Index and Values (User Input)
+
+my_list = input("Enter list elements separated by space: ").split()
+
+for index, value in enumerate(my_list):
+    print("Index:", index, "Value:", value)
+
+Output:
+Enter list elements separated by space: 1 2 2 4
+Index: 0 Value: 1
+Index: 1 Value: 2
+Index: 2 Value: 2
+Index: 3 Value: 4
+
+31. Program to Add Two Lists (User Input)
+Code:
+# Program to Add Two Lists (User Input)
+
+list1 = input("Enter first list elements separated by space: ").split()
+list2 = input("Enter second list elements separated by space: ").split()
+
+result = list1 + list2
+print("Added List:", result)
+
+Output:
+Enter first list elements separated by space: 4 5 5 8
+Enter second list elements separated by space: 5 6 2 3
+Added List: ['4', '5', '5', '8', '5', '6', '2', '3']
+
+32. Program to Check if a List is Empty or Not
+Code:
+# Program to Check if a List is Empty or Not
+
+my_list = input("Enter elements separated by space (press enter if empty): ").split()
+
+if not my_list:
+    print("List is empty")
+else:
+    print("List is not empty:", my_list)
+
+Output:
+Enter elements separated by space (press enter if empty): 5 8 6 3
+List is not empty: ['5', '8', '6', '3']
+
+33. Program to Find the Largest Number in a List
+Code:
+# Program to Find the Largest Number in a List
+
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+largest = max(numbers)
+
+print("Largest number is:", largest)
+
+Output:
+Enter numbers separated by space: 4 5 8 2
+Largest number is: 8
+
+34. Program to Find the Second Largest Number in a List
+Code:
+# Program to Find the Second Largest Number in a List
+
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+numbers.sort()
+
+print("Second largest number is:", numbers[-2])
+
+Output:
+Enter numbers separated by space: 7 5 6 9
+Second largest number is: 7
+
+35. Program to Put Even and Odd Elements into Two Different Lists
+Code:
+# Program to Put Even and Odd Elements into Two Different Lists
+
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+
+even = []
+odd = []
+
+for n in numbers:
+    if n % 2 == 0:
+        even.append(n)
+    else:
+        odd.append(n)
+
+print("Even numbers:", even)
+print("Odd numbers:", odd)
+
+Output:
+Enter numbers separated by space: 5 8 6 2 3
+Even numbers: [8, 6, 2]
+Odd numbers: [5, 3]
