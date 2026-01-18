@@ -1,0 +1,197 @@
+ASSIGNMENT 20
+  # program to display first n numbers
+# ask user for input
+n= int (input("enter how many numbers you want to display : " ))
+print ("the first",n,"natural numbers are:" )
+for i in range(1,n+1):
+    print(i)
+
+OUTPUT
+enter how many numbers you want to display : 10
+the first 10 natural numbers are:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+ASSIGNMNET 21 
+# program to calculate the factorial of a number
+# take input from the user 
+num = int(input("enter a number:"))
+factorial = 1
+# check if the number is negative,zero or positive
+if num<0:
+    print ("sorry, factorial does not exsist for negative numbers.")
+elif num== 0:
+    print ("the favtorial of 0 is 1.")
+else:
+    for i in range(1, num +1):
+        factorial*=i
+    print("the factorial of", num,"is", factorial)  
+    
+
+OUTPUT
+enter a number:2
+the factorial of 2 is 2
+
+ASSIGNMENT 22
+# program to display numbers in reverse order
+
+# take input from the user
+n= int(input("enter how many numbers to display:"))
+
+print("numbers in reverse order:")
+for i in range(n, 0, -1):
+    print(i)
+    
+
+OUTPUT
+enter how many numbers to display:10
+numbers in reverse order:
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+ASSIGNMENT 23
+#program to check if a number is prime 
+
+# take input from the user
+num = int(input("enter a number:"))
+
+#prime numbers are greater than 1
+if num >1:
+   for i in range(2, int(num/2)+1):
+       if(num % i)== 0:
+           print(num, "is not a prim number.")
+           break
+else:
+    print(num,"is a prime number")
+print(num,"is not a prime number")
+
+
+OUTPUT
+enter a number:3
+3 is not a prime number
+ASSIGNMENT 24
+# program to a calculate sum and average of first n numbers
+
+# take input from the user
+n= int(input(" enter how many numbers:"))
+
+# initialize sum
+total=0
+
+#calculate sum using a loop
+for i in range (1, n + 1):
+    total += i
+
+# calculate average
+average = total/n
+
+# display results
+print("sum of first", n ,"numbers is:", total)
+print("average of first", n," numbers is:",average)
+
+
+OUTPUT
+Enter how many numbers:2
+sum of first 2 numbers is: 3
+average of first 2  numbers is: 1
+
+ASSIGNMENT 25
+#program to display first n multiples of a number
+
+#take inputs from the user 
+num= int(input("enter the number:"))
+n= int(input("enter how many multiples to display:"))
+
+print("the first" , n, "multiples of" , num, "are:")
+for i in range(1, n+ 1):
+    print(num *i)
+    
+
+OUTPUT
+enter the number:6
+enter how many multiples to display:6
+the first 6 multiples of 6 are:
+6
+12
+18
+24
+30
+36
+
+ASSIGNMENT 26
+# Program to display first n Fibonacci numbers
+
+# Take input from the user
+n = int(input("Enter how many Fibonacci numbers to display: "))
+
+# First two Fibonacci numbers
+a, b = 0, 1
+
+print("The first", n, "Fibonacci numbers are:")
+
+for i in range(n):
+    print(a)
+    # Update values
+    a, b = b, a + b
+
+ 
+OUTPUT
+Enter how many Fibonacci numbers to display: 8
+The first 8 Fibonacci numbers are:
+0
+1
+1
+2
+3
+5
+8
+13
+
+ASSIGNEMENT 27
+# Program to find the sum of digits of a number
+
+# Take input from the user
+num = int(input("Enter a number: "))
+
+# Initialize sum
+sum_of_digits = 0
+
+# Loop to extract and add each digit
+while num > 0:
+    digit = num % 10        # Get last digit
+    sum_of_digits += digit   # Add it to sum
+    num = num // 10          # Remove last digit
+
+# Display result
+print("Sum of digits is:", sum_of_digits)
+
+
+OUTPUT
+Enter a number: 100
+Sum of digits is: 1
+
+
+
+
+
+
+
+
+
