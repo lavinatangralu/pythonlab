@@ -1,0 +1,82 @@
+import numpy as np
+
+# Create two 3x3 random matrices
+A = np.random.randint(1, 10, (3, 3))
+B = np.random.randint(1, 10, (3, 3))
+
+print("Matrix A:")
+print(A)
+print("\nMatrix B:")
+print(B)
+
+# Addition
+add = A + B
+print("\nAddition:")
+print(add)
+
+# Subtraction
+sub = A - B
+print("\nSubtraction:")
+print(sub)
+
+# Multiplication
+mul = np.dot(A, B)
+print("\nMultiplication:")
+print(mul)
+
+# Display properties for each result
+print("\nProperties of Addition Matrix:")
+print("Shape:", add.shape)
+print("Dimensions:", add.ndim)
+print("Data Type:", add.dtype)
+print("Rank:", np.linalg.matrix_rank(add))
+print("Flatten:", add.flatten())
+
+print("\nProperties of Subtraction Matrix:")
+print("Shape:", sub.shape)
+print("Dimensions:", sub.ndim)
+print("Data Type:", sub.dtype)
+print("Rank:", np.linalg.matrix_rank(sub))
+print("Flatten:", sub.flatten())
+
+print("\nProperties of Multiplication Matrix:")
+print("Shape:", mul.shape)
+print("Dimensions:", mul.ndim)
+print("Data Type:", mul.dtype)
+print("Rank:", np.linalg.matrix_rank(mul))
+print("Flatten:", mul.flatten())
+
+
+
+
+
+
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 30, 25, 15]
+
+# Line Chart
+plt.plot(x, y)
+plt.title("Line Chart")
+plt.show()
+
+# Bar Chart
+plt.bar(x, y)
+plt.title("Bar Chart")
+plt.show()
+
+# Pie Chart
+plt.pie(y, labels=x, autopct='%1.1f%%')
+plt.title("Pie Chart")
+plt.show()
+
+# Scatter Chart
+plt.scatter(x, y)
+plt.title("Scatter Chart")
+plt.show()
+
+# Histogram
+plt.hist(y)
+plt.title("Histogram")
+plt.show()
